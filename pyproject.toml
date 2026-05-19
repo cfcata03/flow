@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flow"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "typer[all]>=0.12",
+    "rich>=13",
+    "rapidfuzz>=3",
+    "textual>=0.60",
+    "pyyaml>=6",
+]
+
+[project.scripts]
+flow = "flow.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
